@@ -34,3 +34,56 @@ step 5:
 create a file named Procfile without extension and inside this file add the following line:
 
 web: gunicorn the_name_of_your_project.wsgi
+
+step 6: install some package
+
+- [x] psycopg2==2.7.5
+- [x] pip install gunicorn
+- [x] pip install django-heroku
+
+
+step 7
+
+add import django_heroku  on te top of your settings.py
+
+add django_heroku.settings(locals()) on the bottom of your settings.py
+
+step 8 
+
+in the same directory of manage.py make :
+
+pip freeze > requirements.txt
+
+step 9
+
+I assume that you have created a heroku account and that you have installed heroku cli
+
+
+in your terminal do :
+heroku login
+you have a prompt order you follow the steps by entering email and password from your heroku account
+
+now you are connected.
+
+step 10:
+
+create your apps on heroku with : heroku create the_name_of_your_app
+make :
+git status
+git add --all
+git commit -m "commit name"
+heroku git:remote -a the_name_of_your_app
+git push heroku master
+heroku run bash
+python manage.py migrate
+python manage.py createsuperuser
+
+
+
+go to the_name_of_your_app.herokuaoo.com ..............................it's Work
+
+Congratitulations
+
+
+
+
