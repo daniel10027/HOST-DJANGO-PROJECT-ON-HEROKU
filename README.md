@@ -54,9 +54,9 @@ web: gunicorn the_name_of_your_project.wsgi
 
 ### step 7
 
-add ```js import django_heroku```  on te top of your settings.py
+add ```import django_heroku```  on te top of your settings.py
 
-add ```js django_heroku.settings(locals())```  on the bottom of your settings.py
+add ```django_heroku.settings(locals())```  on the bottom of your settings.py
 
 ### step 8 
 ```console
